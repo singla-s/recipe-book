@@ -1,6 +1,7 @@
 
   .main-navigation{
-    margin:2em;
+    padding: 2rem;
+    background-color: aliceblue;
   }
   
   ul{
@@ -38,6 +39,22 @@
     color:#fff;
     text-decoration: none;
   }
+
+  .arrow-down {
+    position: relative;
+    top: 14px;
+    left: 5px;
+    width: 0;
+    height: 0;
+    border-left: 7px solid transparent;
+    border-right: 7px solid transparent;
+    border-top: 5px solid #004eff;
+  }
+
+  .sub-menu > li > a{
+      cursor: pointer;
+      z-index: 1;
+  }
   
   @media (min-width: 800px) {
       .menu{
@@ -46,35 +63,29 @@
       }
   }
   
-  nav ul ul {
-      display: none;
-  }
-  
   @media (min-width: 800px) {
     nav ul ul {
-      display: none;
       position:absolute;
     }
   }
   
-  nav ul li:hover > ul {
-    display:block;
-    color:#fff;
-    padding-left:2rem;
-  }
-  
   @media (min-width: 800px) {
-    nav ul li:hover > ul {
-      background:#777;
+    nav ul li > ul {
+      background:aliceblue;
     }
     
-    nav ul li:hover > ul a{
-      color:#fff;
+    nav ul li > ul a{
+      color:rgb(1, 100, 248);
     }
     
+    .sub-menu {
+        padding: 1rem;
+        display: none;
+    }
+
     .sub-menu li{
         display:flex;
-        padding-right:2em;
+        padding: 1rem 0rem;
     }
       
     .sub-menu li:hover, li a:hover{
@@ -84,13 +95,6 @@
     nav ul ul ul{
       margin:0 0 0 100%;
       box-shadow: 0 0 2px rgba(0, 0, 0, 0.6);
-    }
-    
-    .menu-item-has-children .menu-item-has-children > a:after{
-      font-family:'Genericons';
-      content: '\f431';
-      padding:1px;
-      transform: rotate(-90deg);
     }
     
   }

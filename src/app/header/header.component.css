@@ -51,6 +51,10 @@
     border-top: 5px solid #004eff;
   }
 
+  .sub-menu {
+    display: none;
+  }
+
   .sub-menu > li > a{
       cursor: pointer;
       z-index: 1;
@@ -60,6 +64,10 @@
       .menu{
         flex-direction:row;
         justify-content:flex-end;
+      }
+      
+      .sub-menu {
+          display: none;
       }
   }
   

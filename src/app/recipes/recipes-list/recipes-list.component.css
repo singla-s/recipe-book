@@ -1,3 +1,18 @@
+.btn-new-recipe {
+    margin-top: 5%;
+}
+
 .recipe-image {
-    height: 100px;
+    height: 65px;
+    width: 65px;
+}
+
+.recipe-box {
+    padding: 5px 5px 5px 1px;
+    border: 1px groove rgb(20, 43, 170);
+    margin-top: 5px;
+}
+
+.recipe-link {
+    text-decoration: none;
 }

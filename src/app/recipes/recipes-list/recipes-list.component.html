@@ -1,18 +1,18 @@
-<div class="container">
-    <div class="row">
-        <div class="col-md-5">
-            <div class="row" *ngFor = "let recipe of recipes">
-                <div class="col-md-8">
-                    <h6>{{recipe.name}}</h6>
-                    <p>{{recipe.description}}</p>
+<button class="btn btn-success btn-new-recipe">New Recipe</button>
+<hr>
+<div class="row">
+        <div class="col-md-12">
+            <a href="#" class="recipe-link" *ngFor = "let recipe of recipes">
+                <div class="row recipe-box">
+                    <div class="col-md-10">
+                        <h6>{{recipe.name}}</h6>
+                        <p>{{recipe.description}}</p>
+                    </div>
+                    <div class="recipe-display col-md-2">
+                        <img class="recipe-image" src="{{recipe.imagePath}}" alt="recipe for {{recipe.name}}">
+                    </div>
                 </div>
-                <div class="recipe-display col-md-4">
-                    <img class="recipe-image" src="{{recipe.imagePath}}" alt="recipe for {{recipe.name}}">
-                </div>
-            </div>
+            </a>
         </div>
-        <div class="col-md-7">
-            <app-recipe-item></app-recipe-item>
-        </div>
-    </div>
+        <app-recipe-item></app-recipe-item>
 </div>

@@ -76,6 +76,12 @@
       position:absolute;
     }
   }
+
+  @media (max-width: 800px) {
+    .brand {
+        position: relative;
+    }
+  }
   
   @media (min-width: 800px) {
     nav ul li > ul {
@@ -93,7 +99,7 @@
 
     .sub-menu li{
         display:flex;
-        padding: 1rem 0rem;
+        padding: 1rem 1rem;
     }
       
     .sub-menu li:hover, li a:hover{

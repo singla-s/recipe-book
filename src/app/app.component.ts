@@ -7,4 +7,15 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'recipe-book';
+  active: string = "recipe";
+
+  navigateComponent(event) {
+    console.log(event);
+    if(event == "recipe") {
+      this.active = "recipe";
+    }
+    else {
+      this.active = "shopping-list";
+    }
+  }
 }

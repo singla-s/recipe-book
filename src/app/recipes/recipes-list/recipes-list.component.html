@@ -2,17 +2,6 @@
 <hr>
 <div class="row">
         <div class="col-md-12">
-            <a href="#" class="recipe-link" *ngFor = "let recipe of recipes">
-                <div class="row recipe-box">
-                    <div class="col-md-10">
-                        <h6>{{recipe.name}}</h6>
-                        <p>{{recipe.description}}</p>
-                    </div>
-                    <div class="recipe-display col-md-2">
-                        <img class="recipe-image" src="{{recipe.imagePath}}" alt="recipe for {{recipe.name}}">
-                    </div>
-                </div>
-            </a>
+            <app-recipe-item *ngFor = "let recipe of recipes" [recipe] = "recipe"></app-recipe-item>
         </div>
-        <app-recipe-item></app-recipe-item>
 </div>

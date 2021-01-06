@@ -16,7 +16,6 @@ export class RecipesComponent implements OnInit {
 
   showRecipeDetail(event: Recipe) {
     this.recipeDetail = event;
-    console.log(this.recipeDetail);
   }
 
 }

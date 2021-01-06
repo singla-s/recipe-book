@@ -2,6 +2,6 @@
 <hr>
 <div class="row">
         <div class="col-md-12">
-            <app-recipe-item *ngFor = "let recipe of recipes" [recipe] = "recipe"></app-recipe-item>
+            <app-recipe-item *ngFor = "let recipe of recipes" [recipe] = "recipe" (click) = "showRecipeDetail(recipe)"></app-recipe-item>
         </div>
 </div>

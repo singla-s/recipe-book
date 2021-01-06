@@ -1,6 +1,6 @@
 <div class="row">
     <div class="col-md-12">
-        <h1>Recipe Name</h1>
+        <h1>{{recipeDetailInput.name}}</h1>
     </div>
 </div>
 <div class="row">
@@ -17,14 +17,10 @@
           </div>
     </div>
 </div>
-<div class="row">
-    <div class="col-md-12">
-        Recipe Description
-    </div>
-</div>
 
 <div class="row">
-    <div class="col-md-12">
-        Ingredients
+    <div class="col-md-12 mt-3">
+        {{recipeDetailInput.description}}
+        <img class="image-recipe" src="{{recipeDetailInput.imagePath}}">
     </div>
 </div>

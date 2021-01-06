@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { Recipe } from '../recipe.model';
 
 @Component({
@@ -7,6 +7,7 @@ import { Recipe } from '../recipe.model';
   styleUrls: ['./recipes-list.component.css']
 })
 export class RecipesListComponent implements OnInit {
+  @Output() recipeDetail = new EventEmitter<Recipe>(); 
   recipes: Recipe[] = [];
   constructor() { 
     this.recipes.push(new Recipe("Banana Shake", "Banana Shake description", "https://thecozycook.com/wp-content/uploads/2018/06/Peanut-Butter-Banana-Smoothie.jpg"));
@@ -14,6 +15,10 @@ export class RecipesListComponent implements OnInit {
   }
 
   ngOnInit(): void {
+  }
+
+  showRecipeDetail(recipe: Recipe) {
+    this.recipeDetail.emit(recipe);
   }
 
 }

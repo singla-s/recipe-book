@@ -3,3 +3,7 @@
     height: 200px;
     float: right;
 }
+
+.image-hover :hover {
+    border: 1px solid rgb(194, 152, 233);
+}

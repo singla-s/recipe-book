@@ -9,15 +9,9 @@ import { RecipeService } from './recipe.service';
   providers: [RecipeService]
 })
 export class RecipesComponent implements OnInit {
-
-  recipeDetail: Recipe;
   constructor() { }
 
   ngOnInit(): void {
-  }
-
-  showRecipeDetail(event: Recipe) {
-    this.recipeDetail = event;
   }
 
 }

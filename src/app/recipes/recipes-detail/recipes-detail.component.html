@@ -1,26 +1,32 @@
-<div class="row">
-    <div class="col-md-12">
-        <h1>{{recipeDetailInput.name}}</h1>
+<div *ngIf = "this.recipeDetailInput">    
+    <div class="row">
+        <div class="col-md-12">
+            <h1>{{recipeDetailInput.name}}</h1>
+        </div>
     </div>
-</div>
-<div class="row">
-    <div class="col-md-12">
-        <div>
-            <a type="button" class="btn btn-primary" onclick="toggleDropdownRecipeDetail()">
-              Manage Recipe
-            </a>
-            <div class="dropdown-menu dropdown-menu-recipe-details" style="display:none">
-              <a class="dropdown-item" href="#">Add to Recipe</a>
-              <a class="dropdown-item" href="#">Another action</a>
-              <a class="dropdown-item" href="#">Delete Recipe</a>
+    <div class="row">
+        <div class="col-md-12">
+            <div>
+                <a type="button" class="btn btn-primary" onclick="toggleDropdownRecipeDetail()">
+                Manage Recipe
+                </a>
+                <div class="dropdown-menu dropdown-menu-recipe-details" style="display:none">
+                <a class="dropdown-item" href="#">Add to Recipe</a>
+                <a class="dropdown-item" href="#">Another action</a>
+                <a class="dropdown-item" href="#">Delete Recipe</a>
+                </div>
             </div>
-          </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-12 mt-3" appImageHover>
+            {{recipeDetailInput.description}}
+            <img class="image-recipe" src="{{recipeDetailInput.imagePath}}">
+        </div>
     </div>
 </div>
 
-<div class="row">
-    <div class="col-md-12 mt-3" appImageHover>
-        {{recipeDetailInput.description}}
-        <img class="image-recipe" src="{{recipeDetailInput.imagePath}}">
-    </div>
+<div class="m-5" *ngIf = "!this.recipeDetailInput">
+       <h4>Please select a recipe</h4>
 </div>

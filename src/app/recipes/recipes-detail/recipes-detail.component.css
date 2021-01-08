@@ -7,3 +7,11 @@
 .image-hover :hover {
     border: 1px solid rgb(194, 152, 233);
 }
+
+.description {
+    display: inline-block;;
+}
+
+.description ul {
+    padding: 10px 0;
+}

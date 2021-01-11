@@ -1,13 +1,14 @@
 import { EventEmitter, Injectable } from '@angular/core';
 import { Recipe } from '../recipes/recipe.model';
 import { Ingredient } from '../shared/ingredient.model';
+import { ShoppingService } from '../shopping-list/shopping.service';
 
 @Injectable()
 export class RecipeService {
     private recipes: Recipe[] = [];
     recipeDetail = new EventEmitter<Recipe>();
 
-    constructor() {
+    constructor(private shoppingService: ShoppingService) {
         this.recipes.push(new Recipe("Banana Shake", 
                         "Banana Shake description", 
                         "https://thecozycook.com/wp-content/uploads/2018/06/Peanut-Butter-Banana-Smoothie.jpg",
@@ -26,5 +27,9 @@ export class RecipeService {
 
     sendRecipe(recipe: Recipe) {
         this.recipeDetail.emit(recipe);
+    }
+
+    addIngredientsToShoppingList(ingredients: Ingredient[]) {
+        this.shoppingService.addIngredients(ingredients);
     }
 }
